@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joey Chui | AI 工程师作品集</title>
+    <meta
+      name="description"
+      content="Joey Chui 的个人作品集，展示 AI 软件项目、摄影作品、技能与联系方式。"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" data-i18n="skip.link">跳转到主要内容</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrapper">
+        <a class="brand" href="#top" data-i18n-aria-label="brand.homeAria" aria-label="返回首页">Joey Chui</a>
+        <nav class="site-nav" data-i18n-aria-label="nav.aria" aria-label="主导航">
+          <a href="#about" data-i18n="nav.about">关于我</a>
+          <a href="#projects" data-i18n="nav.projects">软件作品</a>
+          <a href="#photos" data-i18n="nav.photos">摄影作品</a>
+          <a href="#skills" data-i18n="nav.skills">技能专长</a>
+          <a href="#contact" data-i18n="nav.contact">联系方式</a>
+        </nav>
+        <div class="header-controls">
+          <div
+            class="lang-switch"
+            role="group"
+            data-i18n-aria-label="lang.switchAria"
+            aria-label="切换语言"
+          >
+            <button class="lang-btn is-active" type="button" data-lang-option="zh" aria-pressed="true">中</button>
+            <button class="lang-btn" type="button" data-lang-option="en" aria-pressed="false">EN</button>
+          </div>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            data-i18n-aria-label="theme.toggleAria"
+            aria-label="切换明暗模式"
+          >
+            <span class="toggle-indicator" aria-hidden="true"></span>
+            <span class="toggle-label">深色</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section" id="about">
+        <div class="container hero-grid reveal">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero.eyebrow">AI 工程师与创意技术实践者</p>
+            <h1 data-i18n="hero.title">构建实用、可靠且富有体验感的 AI 产品。</h1>
+            <p data-i18n="hero.body">
+              我是 Joey Chui，一名专注于应用型 AI 与机器学习系统的软件工程师。我致力于打造可投入生产的工具，覆盖对话式 AI、多模态工作流与自动化平台，帮助团队更快交付价值。
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#projects" data-i18n="hero.ctaProjects">查看项目</a>
+              <a class="button ghost" href="#contact" data-i18n="hero.ctaContact">联系合作</a>
+            </div>
+            <ul class="hero-highlights">
+              <li data-i18n="hero.highlight1">端到端 AI 系统设计</li>
+              <li data-i18n="hero.highlight2">LLM 应用工程化落地</li>
+              <li data-i18n="hero.highlight3">兼顾产品体验的软件交付</li>
+            </ul>
+          </div>
+          <aside class="hero-panel" data-i18n-aria-label="hero.panelAria" aria-label="职业聚焦">
+            <h2 data-i18n="hero.panelTitle">当前关注方向</h2>
+            <ul>
+              <li data-i18n="hero.panel1">面向真实业务场景设计高可靠 AI 流程</li>
+              <li data-i18n="hero.panel2">融合 Python、MLOps 与云原生工程能力</li>
+              <li data-i18n="hero.panel3">将数据与模型转化为高质量产品体验</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="projects.eyebrow">软件作品</p>
+            <h2 data-i18n="projects.title">精选 AI 软件项目</h2>
+            <p data-i18n="projects.body">
+              这里展示了我在 AI 产品工程、模型编排以及自动化工作流方向的代表性项目。
+            </p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <h3>VisionPilot</h3>
+              <p data-i18n="projects.p1.desc">
+                多模态智能助手，支持图像理解与报告生成，并可按速度与效果动态路由模型。
+              </p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>Computer Vision</li>
+              </ul>
+              <a href="https://github.com/joeychui/visionpilot" target="_blank" rel="noreferrer" data-i18n="projects.link">
+                GitHub 仓库
+              </a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>PromptOps Studio</h3>
+              <p data-i18n="projects.p2.desc">
+                一个用于管理提示词全生命周期的工具，包含模板版本管理、评测流程与发布规则。
+              </p>
+              <ul class="tag-list">
+                <li>TypeScript</li>
+                <li>LLM Evaluation</li>
+                <li>CI/CD</li>
+              </ul>
+              <a
+                href="https://github.com/joeychui/promptops-studio"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="projects.link"
+              >
+                GitHub 仓库
+              </a>
+            </article>
+
+            <article class="project-card reveal">
+              <h3>SignalForge</h3>
+              <p data-i18n="projects.p3.desc">
+                实时分析引擎，结合模型推理与事件流处理，为智能产品提供可执行运营洞察。
+              </p>
+              <ul class="tag-list">
+                <li>PyTorch</li>
+                <li>Kafka</li>
+                <li>MLOps</li>
+              </ul>
+              <a href="https://github.com/joeychui/signalforge" target="_blank" rel="noreferrer" data-i18n="projects.link">
+                GitHub 仓库
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="photos">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="photos.eyebrow">摄影作品集</p>
+            <h2 data-i18n="photos.title">以优雅网格呈现视觉故事</h2>
+            <p data-i18n="photos.body">
+              甄选旅行、城市与人像摄影作品。图片经过响应式优化，兼顾加载速度与观赏体验。
+            </p>
+          </div>
+          <div class="photo-grid">
+            <figure class="photo-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80"
+                srcset="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&w=1400&q=80 1400w"
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                data-i18n-alt="photos.alt1"
+                alt="阳光下穿行于城市街道的人物"
+              >
+            </figure>
+            <figure class="photo-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80"
+                srcset="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1400&q=80 1400w"
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                data-i18n-alt="photos.alt2"
+                alt="戏剧性云层下的山地风光"
+              >
+            </figure>
+            <figure class="photo-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=900&q=80"
+                srcset="https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1493244040629-496f6d136cc3?auto=format&fit=crop&w=1400&q=80 1400w"
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                data-i18n-alt="photos.alt3"
+                alt="蓝调时刻水面倒映的城市天际线"
+              >
+            </figure>
+            <figure class="photo-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=900&q=80"
+                srcset="https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?auto=format&fit=crop&w=1400&q=80 1400w"
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                data-i18n-alt="photos.alt4"
+                alt="群山之上铺满星空的夜晚"
+              >
+            </figure>
+            <figure class="photo-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=80"
+                srcset="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?auto=format&fit=crop&w=1400&q=80 1400w"
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                data-i18n-alt="photos.alt5"
+                alt="具有几何线条感的桥梁建筑"
+              >
+            </figure>
+            <figure class="photo-card reveal">
+              <img
+                src="https://images.unsplash.com/photo-1519817914152-22f90e98e9f2?auto=format&fit=crop&w=900&q=80"
+                srcset="https://images.unsplash.com/photo-1519817914152-22f90e98e9f2?auto=format&fit=crop&w=480&q=70 480w, https://images.unsplash.com/photo-1519817914152-22f90e98e9f2?auto=format&fit=crop&w=900&q=80 900w, https://images.unsplash.com/photo-1519817914152-22f90e98e9f2?auto=format&fit=crop&w=1400&q=80 1400w"
+                sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                width="900"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+                data-i18n-alt="photos.alt6"
+                alt="自然光下的人像特写"
+              >
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="eyebrow" data-i18n="skills.eyebrow">技能与专长</p>
+            <h2 data-i18n="skills.title">交互式技术栈展示</h2>
+            <p data-i18n="skills.body">
+              我的能力覆盖编码开发、AI/ML 系统构建与产品交付流程，适配现代云与数据平台。
+            </p>
+          </div>
+
+          <div class="skills-shell reveal">
+            <div class="skill-tabs" role="tablist" data-i18n-aria-label="skills.tabsAria" aria-label="技能分类">
+              <button
+                class="skill-tab is-active"
+                type="button"
+                role="tab"
+                id="tab-ai"
+                aria-controls="panel-ai"
+                aria-selected="true"
+                data-target="panel-ai"
+                data-i18n="skills.tab.ai"
+              >
+                AI / ML
+              </button>
+              <button
+                class="skill-tab"
+                type="button"
+                role="tab"
+                id="tab-engineering"
+                aria-controls="panel-engineering"
+                aria-selected="false"
+                data-target="panel-engineering"
+                data-i18n="skills.tab.engineering"
+              >
+                工程开发
+              </button>
+              <button
+                class="skill-tab"
+                type="button"
+                role="tab"
+                id="tab-tools"
+                aria-controls="panel-tools"
+                aria-selected="false"
+                data-target="panel-tools"
+                data-i18n="skills.tab.tools"
+              >
+                开发工具
+              </button>
+            </div>
+
+            <div class="skill-panel is-active" role="tabpanel" id="panel-ai" aria-labelledby="tab-ai">
+              <ul class="skill-list">
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.ai1.name">Python</span>
+                    <span data-i18n="skills.level.advanced">高级</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 94%"></span></div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.ai2.name">深度学习（PyTorch）</span>
+                    <span data-i18n="skills.level.advanced">高级</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 88%"></span></div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.ai3.name">LLM 应用设计</span>
+                    <span data-i18n="skills.level.advanced">高级</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 91%"></span></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-panel" role="tabpanel" id="panel-engineering" aria-labelledby="tab-engineering" hidden>
+              <ul class="skill-list">
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.eng1.name">TypeScript / Node.js</span>
+                    <span data-i18n="skills.level.advanced">高级</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 87%"></span></div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.eng2.name">API 与后端架构</span>
+                    <span data-i18n="skills.level.advanced">高级</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 89%"></span></div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.eng3.name">系统设计</span>
+                    <span data-i18n="skills.level.advanced">高级</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 86%"></span></div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill-panel" role="tabpanel" id="panel-tools" aria-labelledby="tab-tools" hidden>
+              <ul class="skill-list">
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.tools1.name">Docker 与 Kubernetes</span>
+                    <span data-i18n="skills.level.proficient">熟练</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 82%"></span></div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.tools2.name">GitHub Actions</span>
+                    <span data-i18n="skills.level.proficient">熟练</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 84%"></span></div>
+                </li>
+                <li class="skill-item">
+                  <div class="skill-meta">
+                    <span data-i18n="skills.tools3.name">数据与实验追踪</span>
+                    <span data-i18n="skills.level.proficient">熟练</span>
+                  </div>
+                  <div class="skill-meter"><span style="--level: 80%"></span></div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container contact-layout">
+          <div class="contact-copy reveal">
+            <p class="eyebrow" data-i18n="contact.eyebrow">联系方式</p>
+            <h2 data-i18n="contact.title">一起打造有意义的产品</h2>
+            <p data-i18n="contact.body">
+              我开放 AI 产品合作、工程咨询与摄影委托。你可以通过社交平台联系我，或直接发送留言。
+            </p>
+            <ul class="contact-links">
+              <li><a href="mailto:hello@joeychui.dev">hello@joeychui.dev</a></li>
+              <li><a href="https://github.com/joeychui" target="_blank" rel="noreferrer">GitHub</a></li>
+              <li><a href="https://www.linkedin.com/in/joeychui" target="_blank" rel="noreferrer">LinkedIn</a></li>
+              <li><a href="https://x.com/joeychui" target="_blank" rel="noreferrer">X / Twitter</a></li>
+            </ul>
+          </div>
+
+          <form id="contact-form" class="contact-form reveal" novalidate>
+            <label for="name" data-i18n="form.name.label">姓名</label>
+            <input
+              id="name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              data-i18n-placeholder="form.name.placeholder"
+              placeholder="你的名字"
+            >
+
+            <label for="email" data-i18n="form.email.label">邮箱</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              data-i18n-placeholder="form.email.placeholder"
+              placeholder="you@example.com"
+              required
+            >
+
+            <label for="message" data-i18n="form.message.label">留言</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              data-i18n-placeholder="form.message.placeholder"
+              placeholder="欢迎告诉我你的项目想法..."
+              required
+            ></textarea>
+
+            <button class="button primary" type="submit" data-i18n="form.submit">发送留言</button>
+            <p id="form-status" class="form-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="current-year"></span> Joey Chui.
+          <span data-i18n="footer.tagline">以简洁代码与清晰思路持续创造。</span>
+        </p>
+        <a href="#top" data-i18n="footer.top">回到顶部</a>
+      </div>
+    </footer>
+  </body>
+</html>

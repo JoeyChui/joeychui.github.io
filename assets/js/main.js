@@ -49,8 +49,18 @@
       "projects.p3.desc": "实时分析引擎，结合模型推理与事件流处理，为智能产品提供可执行运营洞察。",
       "projects.link": "GitHub 仓库",
       "photos.eyebrow": "摄影作品集",
-      "photos.title": "以优雅网格呈现视觉故事",
-      "photos.body": "甄选旅行、城市与人像摄影作品。图片经过响应式优化，兼顾加载速度与观赏体验。",
+      "photos.title": "按主题组织的时间序摄影瀑布流",
+      "photos.body": "作品按城市、自然、人像分主题展示，并在每个主题内按照拍摄时间正序排列。",
+      "photos.orderNote": "每个主题内：按拍摄时间由早到晚。",
+      "photos.theme.nature.title": "自然旅途",
+      "photos.theme.nature.desc": "从山野到星空，记录光线与地形的变化。",
+      "photos.theme.city.title": "城市几何",
+      "photos.theme.city.desc": "记录街道秩序、建筑线条与蓝调夜色。",
+      "photos.theme.portrait.title": "人像叙事",
+      "photos.theme.portrait.desc": "聚焦人物状态与情绪氛围，保留真实与克制。",
+      "photos.tag.nature": "自然",
+      "photos.tag.city": "城市",
+      "photos.tag.portrait": "人像",
       "photos.alt1": "阳光下穿行于城市街道的人物",
       "photos.alt2": "戏剧性云层下的山地风光",
       "photos.alt3": "蓝调时刻水面倒映的城市天际线",
@@ -129,8 +139,18 @@
       "projects.p3.desc": "A real-time analytics engine that combines model inference and event processing to produce operational insights for intelligent products.",
       "projects.link": "GitHub Repository",
       "photos.eyebrow": "Photography",
-      "photos.title": "Visual Stories in an Elegant Grid",
-      "photos.body": "A curated gallery of travel, urban, and portrait moments. Images are optimized for responsive loading and smooth browsing.",
+      "photos.title": "Themed Waterfall Gallery in Chronological Order",
+      "photos.body": "Photos are grouped into city, nature, and portrait themes, with each theme sorted in ascending shooting time.",
+      "photos.orderNote": "Inside each theme: arranged from oldest to newest.",
+      "photos.theme.nature.title": "Nature Journey",
+      "photos.theme.nature.desc": "From mountains to starry skies, capturing shifting light and terrain.",
+      "photos.theme.city.title": "Urban Geometry",
+      "photos.theme.city.desc": "Street rhythm, architectural lines, and blue-hour city scenes.",
+      "photos.theme.portrait.title": "Portrait Narratives",
+      "photos.theme.portrait.desc": "Focused on human mood and expression with a restrained visual style.",
+      "photos.tag.nature": "Nature",
+      "photos.tag.city": "City",
+      "photos.tag.portrait": "Portrait",
       "photos.alt1": "Woman walking through sunlit urban street",
       "photos.alt2": "Mountain landscape under dramatic clouds",
       "photos.alt3": "Blue hour city skyline reflected on water",
@@ -310,6 +330,24 @@
   if (currentYear) {
     currentYear.textContent = String(new Date().getFullYear());
   }
+
+  const parseShotDate = (value) => {
+    const timestamp = Date.parse(String(value || ""));
+    return Number.isNaN(timestamp) ? Number.POSITIVE_INFINITY : timestamp;
+  };
+
+  document.querySelectorAll("[data-photo-theme]").forEach((themeGallery) => {
+    const cards = Array.from(themeGallery.querySelectorAll(".photo-card[data-shot-date]"));
+    cards
+      .sort((firstCard, secondCard) => {
+        const firstDate = parseShotDate(firstCard.dataset.shotDate);
+        const secondDate = parseShotDate(secondCard.dataset.shotDate);
+        return firstDate - secondDate;
+      })
+      .forEach((card) => {
+        themeGallery.appendChild(card);
+      });
+  });
 
   const revealElements = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
